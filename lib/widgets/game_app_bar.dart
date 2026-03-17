@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:isaac_test/core/app_assets.dart';
+import 'package:codeshield/core/app_assets.dart';
 
 class MenuAppBar extends StatelessWidget implements PreferredSizeWidget {
   const MenuAppBar({super.key});

@@ -1,6 +1,11 @@
 {
-    "name": "isaac_test",
-    "short_name": "isaac_test",
+<<<<<<< HEAD
+    "name": "codeshield",
+    "short_name": "codeshield",
+=======
+    "name": "codeshield",
+    "short_name": "codeshield",
+>>>>>>> 106bc9955df83ca6a1c2d447928d7d83e6ea0be9
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

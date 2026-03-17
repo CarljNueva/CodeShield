@@ -1,10 +1,18 @@
 # Project-level configuration.
 cmake_minimum_required(VERSION 3.14)
-project(isaac_test LANGUAGES CXX)
+<<<<<<< HEAD
+project(codeshield LANGUAGES CXX)
 
 # The name of the executable created for the application. Change this to change
 # the on-disk name of your application.
-set(BINARY_NAME "isaac_test")
+set(BINARY_NAME "codeshield")
+=======
+project(codeshield LANGUAGES CXX)
+
+# The name of the executable created for the application. Change this to change
+# the on-disk name of your application.
+set(BINARY_NAME "codeshield")
+>>>>>>> 106bc9955df83ca6a1c2d447928d7d83e6ea0be9
 
 # Explicitly opt in to modern CMake behaviors to avoid warnings with recent
 # versions of CMake.

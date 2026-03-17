@@ -7,7 +7,11 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
+<<<<<<< HEAD
 	<string>Isaac Test</string>
+=======
+	<string>Codeshield</string>
+>>>>>>> 106bc9955df83ca6a1c2d447928d7d83e6ea0be9
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -15,7 +19,11 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>isaac_test</string>
+<<<<<<< HEAD
+	<string>codeshield</string>
+=======
+	<string>codeshield</string>
+>>>>>>> 106bc9955df83ca6a1c2d447928d7d83e6ea0be9
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>

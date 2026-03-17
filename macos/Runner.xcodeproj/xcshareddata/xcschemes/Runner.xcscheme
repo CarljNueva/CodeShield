@@ -15,7 +15,11 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "33CC10EC2044A3C60003C045"
-               BuildableName = "isaac_test.app"
+<<<<<<< HEAD
+               BuildableName = "codeshield.app"
+=======
+               BuildableName = "codeshield.app"
+>>>>>>> 106bc9955df83ca6a1c2d447928d7d83e6ea0be9
                BlueprintName = "Runner"
                ReferencedContainer = "container:Runner.xcodeproj">
             </BuildableReference>
@@ -31,7 +35,11 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "33CC10EC2044A3C60003C045"
-            BuildableName = "isaac_test.app"
+<<<<<<< HEAD
+            BuildableName = "codeshield.app"
+=======
+            BuildableName = "codeshield.app"
+>>>>>>> 106bc9955df83ca6a1c2d447928d7d83e6ea0be9
             BlueprintName = "Runner"
             ReferencedContainer = "container:Runner.xcodeproj">
          </BuildableReference>
@@ -66,7 +74,11 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "33CC10EC2044A3C60003C045"
-            BuildableName = "isaac_test.app"
+<<<<<<< HEAD
+            BuildableName = "codeshield.app"
+=======
+            BuildableName = "codeshield.app"
+>>>>>>> 106bc9955df83ca6a1c2d447928d7d83e6ea0be9
             BlueprintName = "Runner"
             ReferencedContainer = "container:Runner.xcodeproj">
          </BuildableReference>
@@ -83,7 +95,11 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "33CC10EC2044A3C60003C045"
-            BuildableName = "isaac_test.app"
+<<<<<<< HEAD
+            BuildableName = "codeshield.app"
+=======
+            BuildableName = "codeshield.app"
+>>>>>>> 106bc9955df83ca6a1c2d447928d7d83e6ea0be9
             BlueprintName = "Runner"
             ReferencedContainer = "container:Runner.xcodeproj">
          </BuildableReference>

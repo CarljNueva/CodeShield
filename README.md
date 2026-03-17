@@ -1,6 +1,6 @@
-# isaac_test
+# codeshield
 
-A new Flutter project.
+Initial prototype for CodeShield.
 
 ## Getting Started
 

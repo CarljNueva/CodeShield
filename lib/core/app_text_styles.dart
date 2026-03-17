@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:isaac_test/core/app_fonts.dart';
+import 'package:codeshield/core/app_fonts.dart';
 
 class AppTextStyles {
   static const _fontSize = 64.0;

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:isaac_test/core/app_assets.dart';
-import 'package:isaac_test/core/app_routes.dart';
-import 'package:isaac_test/core/app_text_styles.dart';
+import 'package:codeshield/core/app_assets.dart';
+import 'package:codeshield/core/app_routes.dart';
+import 'package:codeshield/core/app_text_styles.dart';
 
 void showLoggedOutPopup(BuildContext context) {
   showDialog(

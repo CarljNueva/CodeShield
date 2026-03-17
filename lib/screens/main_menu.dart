@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:isaac_test/core/app_routes.dart';
-import 'package:isaac_test/core/app_assets.dart';
-import 'package:isaac_test/core/app_text_styles.dart';
-import 'package:isaac_test/widgets/popups/logged_out_popup.dart';
+import 'package:codeshield/core/app_routes.dart';
+import 'package:codeshield/core/app_assets.dart';
+import 'package:codeshield/core/app_text_styles.dart';
+import 'package:codeshield/widgets/popups/logged_out_popup.dart';
 
 class MainMenu extends StatelessWidget {
   const MainMenu({super.key});

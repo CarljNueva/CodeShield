@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:isaac_test/core/app_assets.dart';
-import 'package:isaac_test/core/app_text_styles.dart';
-import 'package:isaac_test/widgets/game_app_bar.dart';
+import 'package:codeshield/core/app_assets.dart';
+import 'package:codeshield/core/app_text_styles.dart';
+import 'package:codeshield/widgets/game_app_bar.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
