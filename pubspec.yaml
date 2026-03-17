@@ -1,37 +1,32 @@
 name: codeshield
-description: "A new Flutter project."
-
-publish_to: 'none' 
-
-
+description: "Project for ITE 010 A."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.11.0
-
+    sdk: ^3.11.0
 
 dependencies:
-  flutter:
-    sdk: flutter
-
-  cupertino_icons: ^1.0.8
+    flutter:
+        sdk: flutter
+    cupertino_icons: ^1.0.8
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
-
-  flutter_lints: ^6.0.0
+    flutter_test:
+        sdk: flutter
+    flutter_lints: ^6.0.0
 
 flutter:
-
-  uses-material-design: true
-
-  assets:
-    - assets/images/CodeShieldBackground.png
-    - assets/images/CodeShieldTitle.png
-
-  fonts:
-    - family: Pixelify
-      fonts:
-        - asset: assets/fonts/PixelifySans-VariableFont_wght.ttf
-         
+    uses-material-design: true
+    assets:
+        - assets/
+        - assets/images/
+        - assets/images/icons/
+        - assets/images/profiles/
+        - assets/fonts/
+    fonts:
+        - family: PixelifySans
+          fonts:
+              - asset: assets/fonts/PixelifySans-VariableFont_wght.ttf
