@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
+import 'package:codeshield/Gameplay/spaceshooter.dart';
+import 'package:flame/game.dart';
+=======
 
+>>>>>>> c06077041f43b0b781a882f7cf50fa656bdbd36d
 import 'package:codeshield/core/app_routes.dart';
 import 'package:codeshield/core/app_assets.dart';
 import 'package:codeshield/core/app_text_styles.dart';
@@ -14,7 +19,13 @@ class MainMenu extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         TextButton(
+<<<<<<< HEAD
+          onPressed: () {
+            runApp(GameWidget(game: SpaceShooterGame()));
+          },
+=======
           onPressed: () {},
+>>>>>>> c06077041f43b0b781a882f7cf50fa656bdbd36d
           child: const Text("PLAY", style: AppTextStyles.buttonLabel),
         ),
 
