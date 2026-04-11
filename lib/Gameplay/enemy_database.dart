@@ -1,4 +1,4 @@
-import 'package:codeshield/Gameplay/enemy.dart';
+import 'package:codeshield/gameplay/enemy.dart';
 import 'package:flame/components.dart';
 import 'package:flame/input.dart';
 import 'package:flame/game.dart';

@@ -1,7 +1,6 @@
-
 import 'package:flame/components.dart';
-import 'package:codeshield/Gameplay/spaceshooter.dart';
-import 'package:codeshield/Gameplay/bullet.dart';
+import 'package:codeshield/gameplay/spaceshooter.dart';
+import 'package:codeshield/gameplay/bullet.dart';
 
 class Player extends SpriteAnimationComponent
     with HasGameReference<SpaceShooterGame> {

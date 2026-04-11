@@ -1,24 +1,23 @@
 import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
-import 'package:codeshield/Gameplay/spaceshooter.dart';
+import 'package:codeshield/gameplay/spaceshooter.dart';
 
-
-
-class Bullet extends RectangleComponent with HasGameReference<SpaceShooterGame> {
+class Bullet extends RectangleComponent
+    with HasGameReference<SpaceShooterGame> {
   Bullet({super.position})
-      : super(
-          size: Vector2(40, 8),
-          anchor: Anchor.center,
-          priority: 10,
-          // Pull the color from the game state
-          paint: Paint(), 
-        );
+    : super(
+        size: Vector2(40, 8),
+        anchor: Anchor.center,
+        priority: 10,
+        // Pull the color from the game state
+        paint: Paint(),
+      );
 
   @override
   Future<void> onLoad() async {
     await super.onLoad();
-    
+
     // Apply the current game bullet color to this specific bullet
     paint.color = game.bulletColor;
 

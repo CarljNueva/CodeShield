@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:codeshield/Gameplay/spaceshooter.dart';
+import 'package:codeshield/gameplay/spaceshooter.dart';
 import 'package:flame/game.dart';
 import 'package:codeshield/core/app_routes.dart';
 import 'package:codeshield/core/app_assets.dart';

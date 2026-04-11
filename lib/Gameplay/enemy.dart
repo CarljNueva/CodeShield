@@ -1,10 +1,9 @@
-
 import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
-import 'package:codeshield/Gameplay/home_base.dart';
-import 'package:codeshield/Gameplay/spaceshooter.dart';
-import 'package:codeshield/Gameplay/bullet.dart';
-import 'package:codeshield/Gameplay/explosion.dart';
+import 'package:codeshield/gameplay/home_base.dart';
+import 'package:codeshield/gameplay/spaceshooter.dart';
+import 'package:codeshield/gameplay/bullet.dart';
+import 'package:codeshield/gameplay/explosion.dart';
 
 enum EnemyType { botnet, ransomware, phishing, malware }
 
@@ -26,7 +25,6 @@ class EnemyConfig {
 
 class Enemy extends SpriteAnimationComponent
     with HasGameReference<SpaceShooterGame>, CollisionCallbacks {
-  
   // 1. Add these variables to store the data from the database
   final EnemyConfig config;
   final EnemyType type;
@@ -35,8 +33,8 @@ class Enemy extends SpriteAnimationComponent
   // 2. Update the constructor to accept the data
   Enemy({required this.config, required this.type, super.position})
     : super(size: Vector2.all(enemySize), anchor: Anchor.center) {
-      health = config.health; // Initialize health from the config
-    }
+    health = config.health; // Initialize health from the config
+  }
 
   static const enemySize = 50.0;
 
@@ -69,7 +67,7 @@ class Enemy extends SpriteAnimationComponent
     }
   }
 
-   @override
+  @override
   void onCollisionStart(
     Set<Vector2> intersectionPoints,
     PositionComponent other,
@@ -78,7 +76,7 @@ class Enemy extends SpriteAnimationComponent
 
     if (other is Bullet) {
       // 5. Handle multi-hit enemies (like Ransomware)
-      health--; 
+      health--;
       other.removeFromParent();
 
       if (health <= 0) {
@@ -86,8 +84,7 @@ class Enemy extends SpriteAnimationComponent
         game.add(Explosion(position: position));
         game.score += 10;
       }
-
-    } else if (other is HomeBase){
+    } else if (other is HomeBase) {
       removeFromParent();
       game.add(Explosion(position: position));
       other.triggerHitEffect();
