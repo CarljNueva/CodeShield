@@ -1,3 +1,5 @@
+import 'package:codeshield/screens/enemy_description/carousel_menu.dart';
+import 'package:codeshield/screens/enemy_description/enemy_details.dart';
 import 'package:flutter/material.dart';
 import 'package:codeshield/screens/login_menu.dart';
 
@@ -15,10 +17,10 @@ class MyGameApp extends StatelessWidget {
       title: "CodeShield",
       theme: ThemeData(
         fontFamily: AppFonts.main,
-        brightness: Brightness.dark,
+        brightness: .dark,
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.grey,
-          brightness: Brightness.dark,
+          brightness: .dark,
         ),
       ),
       initialRoute: AppRoutes.root,
@@ -26,6 +28,8 @@ class MyGameApp extends StatelessWidget {
         AppRoutes.root: (context) => const MainMenu(),
         AppRoutes.aboutUs: (context) => const AboutUsMenu(),
         AppRoutes.login: (context) => const LoginPage(),
+        AppRoutes.enemyCarousel: (context) => const EnemyCarousel(),
+        AppRoutes.enemyDetails: (context) => const EnemyDetails(),
       },
     );
   }

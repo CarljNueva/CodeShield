@@ -1,26 +1,31 @@
 import 'package:flame/components.dart';
-import 'package:codeshield/Gameplay/spaceshooter.dart';
+import 'package:codeshield/gameplay/spaceshooter.dart';
 
-class HealthBar extends SpriteAnimationComponent with HasGameReference<SpaceShooterGame> {
-  HealthBar() : super(
-    size: Vector2(384, 136), // How big you want it to look on screen
-    position: Vector2(250, 0), // Top-left margin
-    priority: 100, // Keep it on top of enemies
-  );
+class HealthBar extends SpriteAnimationComponent
+    with HasGameReference<SpaceShooterGame> {
+  HealthBar()
+    : super(
+        size: Vector2(384, 136), // How big you want it to look on screen
+        position: Vector2(250, 0), // Top-left margin
+        priority: 100, // Keep it on top of enemies
+      );
 
   @override
   Future<void> onLoad() async {
     await super.onLoad();
 
     animation = await game.loadSpriteAnimation(
-      'health_bar.png', 
+      'health_bar.png',
       SpriteAnimationData.sequenced(
         amount: 11,
         stepTime: double.infinity, // Manual control only
-        textureSize: Vector2(768, 272), // IMPORTANT: Change this to the pixel size of ONE frame in your Piskel
+        textureSize: Vector2(
+          768,
+          272,
+        ), // IMPORTANT: Change this to the pixel size of ONE frame in your Piskel
       ),
     );
-    
+
     animationTicker?.currentIndex = 0; // Start at full health
   }
 

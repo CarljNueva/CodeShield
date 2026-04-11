@@ -7,14 +7,22 @@ class MenuAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.transparent,
+      backgroundColor: Colors.black,
       elevation: 0,
       leading: IconButton(
         onPressed: () => Navigator.maybePop(context),
         icon: Image.asset(AppIcons.back, filterQuality: FilterQuality.none),
+        tooltip: "Go back",
       ),
       title: Image.asset(AppImages.logo, height: 40),
       centerTitle: true,
+      bottom: PreferredSize(
+        preferredSize: const Size.fromHeight(3.0),
+        child: Container(
+          color: Colors.white.withValues(alpha: 0.1),
+          height: 1.0,
+        ),
+      ),
     );
   }
 

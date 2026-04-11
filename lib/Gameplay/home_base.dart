@@ -1,19 +1,21 @@
 import 'package:flame/components.dart';
 import 'package:flame/collisions.dart'; // Required for RectangleHitbox
 import 'package:flutter/material.dart'; // Required for Colors/Paint
-import 'package:codeshield/Gameplay/spaceshooter.dart';
-
+import 'package:codeshield/gameplay/spaceshooter.dart';
 
 // HomeBase file
 
-class HomeBase extends RectangleComponent with HasGameReference<SpaceShooterGame> {
-  late SpriteComponent _visual; // This must be assigned! // If modifying Homebase must use _visual
+class HomeBase extends RectangleComponent
+    with HasGameReference<SpaceShooterGame> {
+  late SpriteComponent
+  _visual; // This must be assigned! // If modifying Homebase must use _visual
 
-  HomeBase() : super(
-    size: Vector2(256, 1080), 
-    position: Vector2(0, -175),
-    paint: Paint()..color = Colors.transparent, 
-  );
+  HomeBase()
+    : super(
+        size: Vector2(256, 1080),
+        position: Vector2(0, -175),
+        paint: Paint()..color = Colors.transparent,
+      );
 
   bool isShieldActive = false;
   late SpriteComponent shieldVisual;
@@ -21,9 +23,11 @@ class HomeBase extends RectangleComponent with HasGameReference<SpaceShooterGame
   Future<void> activateMFAShield() async {
     if (isShieldActive) return;
     isShieldActive = true;
-    
+
     shieldVisual = SpriteComponent(
-      sprite: await game.loadSprite('mfa_shield_visual.png'), // Your shield asset
+      sprite: await game.loadSprite(
+        'mfa_shield_visual.png',
+      ), // Your shield asset
       size: size * 1.5,
       anchor: Anchor.center,
       position: size / 2,
@@ -36,7 +40,7 @@ class HomeBase extends RectangleComponent with HasGameReference<SpaceShooterGame
       shieldVisual.removeFromParent();
     });
   }
-  
+
   @override
   Future<void> onLoad() async {
     await super.onLoad();
@@ -46,22 +50,20 @@ class HomeBase extends RectangleComponent with HasGameReference<SpaceShooterGame
       sprite: await game.loadSprite("homeserver.png"),
       size: size,
     );
-    
+
     // 2. Add it as a child
     add(_visual);
 
-    add(RectangleHitbox(
-      collisionType: CollisionType.passive,
-    ));
+    add(RectangleHitbox(collisionType: CollisionType.passive));
   }
 
   void triggerHitEffect() {
     // Now _visual actually exists and has a paint property
     _visual.paint.colorFilter = const ColorFilter.mode(
-      Colors.red, 
+      Colors.red,
       BlendMode.srcATop,
     );
-    
+
     Future.delayed(const Duration(milliseconds: 100), () {
       // Safely check if the component is still mounted before resetting
       if (_visual.isMounted) {
