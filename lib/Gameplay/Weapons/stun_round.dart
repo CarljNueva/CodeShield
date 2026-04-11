@@ -1,21 +1,22 @@
 import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
-import 'package:codeshield/Gameplay/spaceshooter.dart';
-import 'package:codeshield/Gameplay/EnemyConfig/enemy.dart';
+import 'package:codeshield/gameplay/spaceshooter.dart';
+import 'package:codeshield/gameplay/enemy_config/enemy.dart';
 
-class StunRound extends CircleComponent with HasGameReference<SpaceShooterGame>, CollisionCallbacks {
+class StunRound extends CircleComponent
+    with HasGameReference<SpaceShooterGame>, CollisionCallbacks {
   double travelDistance = 0;
   final double maxDistance = 300; // How far it goes before expanding
   bool isExpanded = false;
 
   StunRound({required Vector2 position})
-      : super(
-          position: position,
-          radius: 5,
-          anchor: Anchor.center,
-          paint: Paint()..color = Colors.yellowAccent,
-        );
+    : super(
+        position: position,
+        radius: 5,
+        anchor: Anchor.center,
+        paint: Paint()..color = Colors.yellowAccent,
+      );
 
   @override
   Future<void> onLoad() async {
@@ -38,7 +39,9 @@ class StunRound extends CircleComponent with HasGameReference<SpaceShooterGame>,
       // Fade out the expansion field
       double currentAlpha = paint.color.a;
       if (currentAlpha > 0) {
-        paint.color = paint.color.withValues(alpha: (currentAlpha - 2 * dt).clamp(0, 1));
+        paint.color = paint.color.withValues(
+          alpha: (currentAlpha - 2 * dt).clamp(0, 1),
+        );
       } else {
         removeFromParent();
       }
@@ -54,7 +57,10 @@ class StunRound extends CircleComponent with HasGameReference<SpaceShooterGame>,
   }
 
   @override
-  void onCollisionStart(Set<Vector2> intersectionPoints, PositionComponent other) {
+  void onCollisionStart(
+    Set<Vector2> intersectionPoints,
+    PositionComponent other,
+  ) {
     super.onCollisionStart(intersectionPoints, other);
     if (other is Enemy) {
       other.applyStun();

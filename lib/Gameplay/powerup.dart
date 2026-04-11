@@ -1,22 +1,23 @@
 import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
-import 'package:codeshield/Gameplay/player.dart';
+import 'package:codeshield/gameplay/player.dart';
 
-import 'package:codeshield/Gameplay/spaceshooter.dart';
+import 'package:codeshield/gameplay/spaceshooter.dart';
 
 enum PowerUpType { fireRate, mfaShield, honeyPot, totalReset, firewall }
 
-class PowerUp extends SpriteComponent with HasGameReference<SpaceShooterGame>, CollisionCallbacks {
+class PowerUp extends SpriteComponent
+    with HasGameReference<SpaceShooterGame>, CollisionCallbacks {
   final PowerUpType type;
 
-  PowerUp({required this.type, required Vector2 position}) 
+  PowerUp({required this.type, required Vector2 position})
     : super(position: position, size: Vector2(48, 48), anchor: Anchor.center);
 
   @override
   Future<void> onLoad() async {
     await super.onLoad();
 
-  String fileName;
+    String fileName;
     switch (type) {
       case PowerUpType.fireRate:
         fileName = 'speed_boost.png'; // Change to your actual filename
@@ -34,7 +35,7 @@ class PowerUp extends SpriteComponent with HasGameReference<SpaceShooterGame>, C
         fileName = 'honeypot_active.png';
         break;
     }
-    
+
     sprite = await game.loadSprite(fileName);
     add(CircleHitbox(collisionType: CollisionType.passive));
   }
@@ -47,7 +48,10 @@ class PowerUp extends SpriteComponent with HasGameReference<SpaceShooterGame>, C
   }
 
   @override
-  void onCollisionStart(Set<Vector2> intersectionPoints, PositionComponent other) {
+  void onCollisionStart(
+    Set<Vector2> intersectionPoints,
+    PositionComponent other,
+  ) {
     super.onCollisionStart(intersectionPoints, other);
     if (other is Player) {
       game.applyPowerUp(type);

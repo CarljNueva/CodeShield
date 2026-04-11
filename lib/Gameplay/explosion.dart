@@ -1,17 +1,14 @@
 import 'package:flame/components.dart';
-import 'package:codeshield/Gameplay/spaceshooter.dart';
-
+import 'package:codeshield/gameplay/spaceshooter.dart';
 
 class Explosion extends SpriteAnimationComponent
     with HasGameReference<SpaceShooterGame> {
-  Explosion({
-    super.position,
-  }) : super(
-          size: Vector2.all(150),
-          anchor: Anchor.center,
-          removeOnFinish: true,
-        );
-
+  Explosion({super.position})
+    : super(
+        size: Vector2.all(150),
+        anchor: Anchor.center,
+        removeOnFinish: true,
+      );
 
   @override
   Future<void> onLoad() async {
