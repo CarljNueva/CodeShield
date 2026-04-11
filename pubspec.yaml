@@ -1,8 +1,6 @@
 name: codeshield
 description: "Project for ITE 010 A."
-# The following line prevents the package from being accidentally published to
-# pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: "none" # Remove this line if you wish to publish to pub.dev
+publish_to: "none"
 version: 1.0.0+1
 
 environment:
@@ -12,10 +10,7 @@ dependencies:
     flutter:
         sdk: flutter
     cupertino_icons: ^1.0.8
-<<<<<<< HEAD
     flame: ^1.36.0
-=======
->>>>>>> c06077041f43b0b781a882f7cf50fa656bdbd36d
 
 dev_dependencies:
     flutter_test:
