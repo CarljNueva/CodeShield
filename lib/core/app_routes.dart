@@ -4,4 +4,5 @@ class AppRoutes {
   static const String login = "/login";
   static const String enemyCarousel = "/enemies/carousel";
   static const String enemyDetails = "/enemies/details";
+  static const String howToPlay = "/how-to-play";
 }

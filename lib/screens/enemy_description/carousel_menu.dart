@@ -2,7 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:codeshield/core/app_assets.dart';
 import 'package:codeshield/core/app_fonts.dart';
 import 'package:codeshield/core/app_routes.dart';
-import 'package:codeshield/screens/enemy_description/carousel_data.dart';
+import 'package:codeshield/core/carousel_data.dart';
 import 'package:codeshield/widgets/game_app_bar.dart';
 import 'package:flutter/material.dart';
 
