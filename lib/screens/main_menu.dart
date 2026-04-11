@@ -11,8 +11,8 @@ class MainMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget colMenuButtons = Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+    final colMenuButtons = Column(
+      crossAxisAlignment: .start,
       children: [
         TextButton(
           onPressed: () {
@@ -31,7 +31,9 @@ class MainMenu extends StatelessWidget {
         const SizedBox(height: 20),
 
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, AppRoutes.enemyCarousel);
+          },
           child: const Text(
             "ENEMY DESCRIPTION",
             style: AppTextStyles.buttonLabel,
@@ -50,7 +52,7 @@ class MainMenu extends StatelessWidget {
     );
 
     Widget colStats = Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: .start,
       children: [
         const SizedBox(height: 125),
 
@@ -73,7 +75,7 @@ class MainMenu extends StatelessWidget {
     );
 
     Widget colMain = Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
+      crossAxisAlignment: .center,
       children: [
         Center(child: Image.asset(AppImages.logo, width: 800)),
 
@@ -81,15 +83,15 @@ class MainMenu extends StatelessWidget {
 
         Expanded(
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: .spaceBetween,
+            crossAxisAlignment: .start,
             children: [colMenuButtons, colStats],
           ),
         ),
       ],
     );
 
-    Widget padding = Padding(
+    final padding = Padding(
       padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 40),
       child: colMain,
     );
@@ -99,9 +101,8 @@ class MainMenu extends StatelessWidget {
         children: [
           // Background Image
           SizedBox.expand(
-            child: Image.asset(AppImages.menuBackground, fit: BoxFit.cover),
+            child: Image.asset(AppImages.menuBackground, fit: .cover),
           ),
-
           SafeArea(child: padding),
         ],
       ),
