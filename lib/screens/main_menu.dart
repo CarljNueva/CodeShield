@@ -24,7 +24,9 @@ class MainMenu extends StatelessWidget {
         const SizedBox(height: 20),
 
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, AppRoutes.howToPlay);
+          },
           child: const Text("HOW TO PLAY", style: AppTextStyles.buttonLabel),
         ),
 

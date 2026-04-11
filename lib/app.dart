@@ -1,5 +1,6 @@
 import 'package:codeshield/screens/enemy_description/carousel_menu.dart';
 import 'package:codeshield/screens/enemy_description/enemy_details.dart';
+import 'package:codeshield/screens/how_to_play/carousel_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:codeshield/screens/login_menu.dart';
 
@@ -30,6 +31,7 @@ class MyGameApp extends StatelessWidget {
         AppRoutes.login: (context) => const LoginPage(),
         AppRoutes.enemyCarousel: (context) => const EnemyCarousel(),
         AppRoutes.enemyDetails: (context) => const EnemyDetails(),
+        AppRoutes.howToPlay: (context) => const HowToPlayMenu(),
       },
     );
   }

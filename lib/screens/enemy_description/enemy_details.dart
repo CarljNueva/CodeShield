@@ -1,5 +1,5 @@
 import 'package:codeshield/core/app_assets.dart';
-import 'package:codeshield/screens/enemy_description/carousel_data.dart';
+import 'package:codeshield/core/carousel_data.dart';
 import 'package:codeshield/widgets/game_app_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -52,6 +52,27 @@ class EnemyDetails extends StatelessWidget {
       ),
     );
 
+    final mainContent = Padding(
+      padding: const .symmetric(horizontal: 32.0, vertical: 16.0),
+      child: Column(
+        children: [
+          Text(
+            "ENEMY DESCRIPTION",
+            style: TextStyle(fontSize: 32, fontWeight: .bold),
+          ),
+          const SizedBox(height: 20),
+          Row(
+            mainAxisAlignment: .center,
+            crossAxisAlignment: .start,
+            children: [
+              hero,
+              Expanded(child: description),
+            ],
+          ),
+        ],
+      ),
+    );
+
     return Scaffold(
       appBar: MenuAppBar(),
       body: Stack(
@@ -59,23 +80,7 @@ class EnemyDetails extends StatelessWidget {
           SizedBox.expand(
             child: Image.asset(AppImages.menuBackgroundAlt, fit: .cover),
           ),
-          Column(
-            children: [
-              Text(
-                "ENEMY DESCRIPTION",
-                style: TextStyle(fontSize: 32, fontWeight: .bold),
-              ),
-              const SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: .center,
-                crossAxisAlignment: .start,
-                children: [
-                  hero,
-                  Expanded(child: description),
-                ],
-              ),
-            ],
-          ),
+          mainContent,
         ],
       ),
     );

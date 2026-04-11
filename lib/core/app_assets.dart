@@ -18,3 +18,9 @@ class AppIcons {
   static const String edit = "$_icons/edit_icon.png";
   static const String close = "$_icons/close_icon.png";
 }
+
+class AppVideos {
+  static const String _videos = "assets/videos";
+
+  static const String bomboclat = "$_videos/top5bomboclat.mp4";
+}
